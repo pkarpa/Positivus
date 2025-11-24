@@ -2,6 +2,30 @@
 
 @media screen and (max-width: 1024px) {
     
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0, -100%);
+        width: 100%;
+        background: #f3f3f3;
+        padding: 20px 30px;
+        visibility: hidden;
+        transition: .3s;
+
+        &.show{
+            top: 162px;
+            transform: translate(0, 0);
+            visibility: visible;
+        }
+
+        &-list {
+            flex-direction: column;
+        }
+    }
+
+    
 }
 
 

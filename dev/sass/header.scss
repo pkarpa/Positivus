@@ -1,10 +1,96 @@
 @use "variables";
 
-header {
-	display: flex;
-	align-items: center;
-	height: 60px;
-	padding: 15px 12px;
-	background: variables.$bg-accent-color;
-	color: variables.$primary-hover-color
-}
+ header{
+	position: relative;
+	padding: 60px 0;
+
+	.header-logo{
+		&__img{
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	>.container{
+		display: flex;
+		align-items: center;
+	}
+
+	.mobile-container{
+		margin-left: auto;
+	}
+
+	.menu{
+		display: flex;
+		gap: 20px;
+		align-items: center;
+
+		&-list{
+			display: flex;
+			align-items: center;
+			gap: 40px;
+		}
+
+		&__link{
+			text-decoration: none;
+			color: variables.$text-color;
+			font-family: variables.$font-primary;
+			font-size: 20px;
+			font-weight: 400;
+			transition: .2s;
+
+			&:hover{
+				text-decoration: underline;
+				font-size: 21px;
+			}
+		}
+	}
+
+	.btn-burger{
+        width: 46px;
+        height: 36px;
+		padding: 0;
+        z-index: 1;
+        position: relative;
+        background: none;
+        border: none;
+
+        span{
+            height: 2px;
+            width: 100%;
+            display: inline-block;
+            background-color: variables.$primary-color;
+			position: absolute;
+			left: 0;
+			transition: .3s;
+
+			&:nth-child(0){
+				top: 18px;
+			}
+
+			&:nth-child(1){
+				top: 0;
+			}
+
+			&:last-child{
+				top:33px;
+			}
+        }
+
+		&.active{
+			span{
+				top: 18px;
+				transform: rotate(45deg);
+				
+				&:nth-child(1){
+					top: 18px;
+					transform: rotate(-45deg);
+				}
+
+				&:last-child{
+					opacity: 0;
+				}
+			}
+		}
+    }
+ }

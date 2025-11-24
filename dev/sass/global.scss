@@ -86,14 +86,6 @@ h4 {
     font-size: variables.$h4-font-size;
 }
 
-h5 {
-    font-size: variables.$h5-font-size;
-}
-
-h6 {
-    font-size: variables.$h6-font-size;
-}
-
 p {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -103,7 +95,29 @@ footer {
     margin-top: auto;
 }
 
+.container{
+    max-width: 1264px;
+    padding: 0 24px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    padding: 20px 35px;
+    background: transparent;
+    border: 1px solid variables.$primary-color;
+    border-radius: 14px;
+    font-family: variables.$font-primary;
+    font-size: 20px;
+
+    &:hover{
+        background: variables.$primary-color;
+        color: #FFFFFF;
+    }
+}
+
 ::selection {
     background-color: variables.$font-primary;
-    color: variables.$font-secondary;
 }
