@@ -1,5 +1,10 @@
 @use "../../sass/variables";
 
 @media screen and (max-width: 1199px) {
+    .header{
+        .menu-list{
+            gap: 20px;
+        }
+    }
     
 }
