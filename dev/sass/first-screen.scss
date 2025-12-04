@@ -1,6 +1,8 @@
 @use "variables";
 
 .first-screen{
+    margin-bottom: 140px;
+
     &-content {
         display: flex;
         justify-content: space-between;
